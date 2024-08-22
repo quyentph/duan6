@@ -1,0 +1,458 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    height: 150px;
+    background-image: linear-gradient(0, red, orange);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.header_nav--list {
+    list-style: none; /* bỏ chấm đầu dòng */
+    padding-left: 0;
+    margin-top: 4px;
+}
+
+.header_nav--item {
+    display: inline-block;
+    margin: 0 8px;
+    position: relative;
+}
+
+.header_nav--item--link {
+    font-size: 1.5rem;
+    color: var(--white-color);
+    text-decoration: none; /* bỏ gạch chân trên thẻ a */
+}
+.haeder-navbar-user{
+    display: flex;
+    justify-content: center;
+    }
+.header-navbar-icon{
+    width: 22px;
+    height: 22px;
+    border-radius: 2px;
+    
+}
+.header-navbar__name{
+    font-size: 12px;
+    
+}
+.header_nav--item:hover,
+.header_nav--item--link:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header_nav--item--strong {
+    font-weight: bold;
+}
+
+.header_nav--item--phancach::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background-color: aliceblue;
+    right: -9px;
+    top: 10%;
+}
+
+/* QR */
+.head__qr {
+    background-color: var(--white-color);
+    width: 186px;
+    position: absolute;
+    left: 0;
+    top: 180%;
+    padding: 8px;
+    border-radius: 2px;
+    display: none; /* ẩn qr */
+    animation: ten ease 0.5s;
+}
+
+.qr-img {
+    width: 100%;
+}
+
+.header_qr-apps {
+    display: flex;
+    justify-content: space-between;
+}
+
+.head__qr-link:nth-child(1) {
+    margin-left: 11px;
+}
+
+.head__qr-link:nth-child(2) {
+    margin-right: 11px;
+}
+
+.header__qr-dowload-img {
+    height: 15px;
+}
+
+.header_nav--item-qr:hover .head__qr {
+    display: block;
+}
+
+/* Thông báo */
+.header__thongbao {
+    position: absolute;
+    top: 118%;
+    right: 0;
+    width: 404px;
+    background-color: var(--white-color);
+    border: 1px solid #d3d3d3;
+    cursor: default;/*Di vao k hien hinh ban tay*/
+    transform-origin: calc(100% - 20px) top; /* dịch chuyển từ tâm sang góc trải trên */
+    animation: thongbaolonlen ease-in 0.25s;
+    display:  none;
+}
+@keyframes thongbaolonlen {
+    from{
+        opacity: 0;
+        transform:  scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+.header__thongbao::before{
+    content: " ";
+    border: 20px solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 12px;
+    top : -28px;
+}   
+.header__thongbao-header {
+    height: 40px;
+    background-color: var(--white-color);
+}
+
+.header__thongbao-header h3 {
+    color: #666;
+    margin: 0 0 0 12px;
+    width: 400;
+    font-size: 1.5rem;
+    line-height: 40px;
+}
+.header__thongbao-list{
+    padding-left: 0;
+
+
+}
+.header__thongbao-item{
+    
+
+}
+.header__thongbao-item :hover{
+    background-color: #fff;
+
+}
+
+.header__thongbao-link{
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+    background-color: pink;
+}
+.header__thongbao-img{
+    width: 20px;
+    object-fit: contain;
+}
+.header__thongbao-info{
+    margin-left: 12px;
+}
+.header__thongbao-name{
+    display: block;
+    font-size: 1.4rem;
+    color: var(--black-color);
+    font-weight: bold;
+    line-height: 1.8rem;
+
+}
+.header__thongbao-mota{
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #888;
+    margin-top: 4px;
+}
+.header__thongbao-fooder{
+    display: flex;
+
+    
+
+}
+.header__thongbao-fooder-btn{
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px 16px;
+    margin: auto;
+    
+}
+.header_navbar--item-has-notify:hover .header__thongbao{
+    display: block;
+}
+.moda{
+    
+    animation: fadeIN linear 0.1s;
+}
+.auth-form__container{
+    padding: 0 32px;
+}
+.auth-form_header{
+    display: flex;
+    align-items: center;/* căn cùng thẳng hàng*/
+    justify-content: space-between;/*Giãn cách nhau*/
+
+}
+.auth-form__heading{
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+.auth-form__switch-btn{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: red;
+    cursor: pointer;/*Di chuột vào thành bàn tay*/ 
+}   
+
+.auth-form{
+    width: 500px;
+}
+.auth-form__input{
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    border-radius: 2px;
+    border: 1px solid red;
+}
+.auto-form__asige{
+    margin-top: 28px;
+    margin-bottom: 120px;
+    margin-left: 26px;
+    margin-right: 26px;
+    text-align: center;
+
+
+}
+.auth-form_policy-text{
+    font-size: 12px;
+    
+}
+.auth-form_policy-link{
+    color: red;
+}
+.auto-form__controls{
+    position: relative;
+    left: 280px
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    border: none;
+}
+.btn--primary{
+    background-color: red;
+    border : none;
+    color: var(--white-color);
+}
+.btn{
+    margin-right: 8px;
+}
+.auto-form__socials{
+    margin-top: 25px;
+    background-color: #d3d3d3;
+    width: 100%;
+    height: 50px;
+    
+}
+.btn--with-icon{
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    
+}
+.auth-form_header{
+
+        
+}
+.auto-form__help{
+    display: flex;
+   justify-content: flex-end;    /*Chuển về cuối trang*/
+  
+}
+.auto-form__help-link{
+    
+  
+}
+.auto-form__help-vachcatngang{
+    display: block;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 9px;
+    border-left: 1px solid var( --border-color);
+     
+}
+.auto-form__help-link1{
+    color: red;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.auto-form__help-link2{
+    color: #888;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+.header__logo{
+    margin-left: 7px;
+    margin-bottom: 5px;
+}
+.header__search {
+    margin-top: -70px;
+    float:right;
+    margin-right: 180px;
+    width: 700px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+   
+    
+    /* Add any additional necessary styles */
+}
+.header--search__char{
+    color: #888;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-right: 10px;
+   
+    /* animation: gachchant 0.5s ease; */
+}
+
+
+
+
+.header--search__logo-cart{
+    float: right;
+    margin-top: -25px;
+    margin-right: 0px;
+    
+}
+
+.header__menu{
+    display: flex;
+    margin-top:30px;
+    justify-content: space-between;
+    
+}
+.header__menu--sanpham{
+    font-size: 12px;
+    color: var(--white-color);
+}
+.header__logo--cart{
+    float: right;
+    margin-top:-65px;
+    margin-right: 70px;
+}
+.header__logo--cart-thongbao{
+    background-color: #d3d3d3;
+}
+.header__search-select{
+    float: right;
+    color: var(--black-color);
+    margin-right:42px;
+    border-left: 1px solid var(--black-color);
+    padding-left: 3px;
+}
+/* container */
+.container{
+    background-color: #d3d3d3;
+}
+.category{
+    background-color: var(--white-color);
+    border-radius: 2px;
+
+}
+.category__heading{
+    font-size: 1.65rem;
+    color: #888;
+    padding: 12px 16px;
+    border-bottom: 1px solid #d3d3d3;
+}
+.category-list{
+    padding: 0 0 8px 0;
+    list-style: none;
+}
+.ategory-item{
+
+}
+.ategory-item__active{
+
+}
+.category-item__link{
+    text-decoration: none;
+    color: #888;
+    font-size: 1.4rem;
+}
+.category-list{
+    padding-left: 0;
+    list-style: none;
+    margin-left: 15px;
+}
+.category-item{
+
+}
+.category-item__active .category-item__link{
+    color: red;
+} 
+.category-item__active .category-item__link::before{
+    content :"";
+    top :35%;
+    left: 4px;
+    position: absolute;
+    border: 4px solid;
+    /* transform: translateY(calc(-50%-10px)); */
+    border-color: transparent transparent transparent red;
+}
+.category-item__link{
+    position: relative;
+    text-decoration: none;
+    /* font-weight: bold; */
+    color: var(--black-color);
+    font-size: 1.4rem;
+    display: block;
+    padding: 4px 12px;
+    cursor: pointer;
+
+    transition: right linear 0.1s; /*Định nghĩa về chuyển động*/
+    right: 0;
+}
+.category-item__link:hover{
+    right: -4px;
+    /* chạy từ phảu sang  */
+    color: var(--primary-color);
+    /* khi di chuột vào sẽ thấy đổi thaanhf màu --primary-color */
+}
+
+.btn-1{
+   
+  
+    background-color: red;
+    
+}
+.grid__column-10{
+    
+}
